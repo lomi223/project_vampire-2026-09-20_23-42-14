@@ -18,13 +18,20 @@ public class ChangePictureOnMove : MonoBehaviour
 
     void Start()
     {
+
+        string initPhotoPath = Application.streamingAssetsPath + "/TmpPicFolder/TempPhoto.PNG";
+        byte[] initPhotoData = File.ReadAllBytes(initPhotoPath);
+        Texture2D initTex = new Texture2D(2, 2);
+        initTex.LoadImage(initPhotoData);
+        newPicture = Sprite.Create(initTex, new Rect(0, 0, initTex.width, initTex.height), new Vector2(0.5f, 0.5f));
         //取得使用該script的gameObject中SpriteRenderer的內容
         //mySpriteRenderer是gameObject "風好大" 的 SpriteRenderer (in current version)
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        mySpriteRenderer.sprite = newPicture;
 
         // 2. Define where your JSON file is located
-        // NOTE: Application.datapath = "C:/Users/<your usr name>/project_vampire/Assets" 注意斜線方向
-        string jsonFilePath = Application.dataPath + "/Json/TestImgPath.json";
+        // NOTE: Application.streamingAssetsPath = "Assets/streamingAssets/Json/TestImgPath.json" 注意斜線方向
+        string jsonFilePath = Application.streamingAssetsPath + "/Json/TestImgPath.json";
         // Json (命名為：TestImgPath) 存在於 C:/Users/<your usr name>/project_vampire/Assets/Json 時執行
         if (File.Exists(jsonFilePath))
         {
@@ -35,9 +42,9 @@ public class ChangePictureOnMove : MonoBehaviour
             // 4. Convert the JSON string into our C# ConfigData object
             ConfigData loadedConfig = JsonUtility.FromJson<ConfigData>(jsonString);
 
-            // result: "C:/Users/<your usr name>/project_vampire/Assets/TmpPicFolder/newPhoto.PNG"
+            // result: "C:/Users/<your usr name>/project_vampire/Assets/streamingAssets/TmpPicFolder/newPhoto.PNG"
             // 5. Combine the dataPath with the path we just pulled from the JSON
-            string fullImagePath = Application.dataPath + loadedConfig.imagePath;
+            string fullImagePath = Application.streamingAssetsPath + loadedConfig.imagePath;
 
             // 6. Load the image using the new dynamic path
             LoadSpriteFromFile(fullImagePath);
