@@ -20,10 +20,7 @@ public class ChangePictureOnMove : MonoBehaviour
     {
 
         string initPhotoPath = Application.streamingAssetsPath + "/TmpPicFolder/TempPhoto.PNG";
-        byte[] initPhotoData = File.ReadAllBytes(initPhotoPath);
-        Texture2D initTex = new Texture2D(2, 2);
-        initTex.LoadImage(initPhotoData);
-        newPicture = Sprite.Create(initTex, new Rect(0, 0, initTex.width, initTex.height), new Vector2(0.5f, 0.5f));
+        LoadSpriteFromFile(initPhotoPath);
         //取得使用該script的gameObject中SpriteRenderer的內容
         //mySpriteRenderer是gameObject "風好大" 的 SpriteRenderer (in current version)
         mySpriteRenderer = GetComponent<SpriteRenderer>();
