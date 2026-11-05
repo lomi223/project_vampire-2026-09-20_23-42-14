@@ -1,4 +1,4 @@
-# 目前的構想
+
 ## In store:
 
 1. chmgr: spawn obj
@@ -52,3 +52,8 @@
 	] 
 }
 ```
+
+## Note
+- 腳色存放位置：`Assets/StreamtingAssets/Ch`
+- 角色資料（圖片, 名字）：`Ch/<folderName>/*.json`
+- 文本：`csv` (暫時)
