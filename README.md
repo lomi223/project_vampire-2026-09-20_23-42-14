@@ -1,4 +1,4 @@
-
+# 目前的構想
 ## In store:
 
 1. chmgr: spawn obj
