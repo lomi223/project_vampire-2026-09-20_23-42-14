@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7159198936270903071}
   - component: {fileID: 8087438271570468117}
   - component: {fileID: 2384839480755466386}
+  - component: {fileID: 915194255718209293}
   m_Layer: 0
   m_Name: "\u98A8\u597D\u5927_0"
   m_TagString: Untagged
@@ -91,7 +92,7 @@ SpriteRenderer:
   m_Size: {x: 2.33, y: 2.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!114 &8087438271570468117
@@ -118,3 +119,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1673b2f957e8c924fac308c7693ec5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &915194255718209293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4527763570551572459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12814724b70977f4d97a0a9c087e5503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movements
