@@ -14,7 +14,7 @@
 		- speed
 		- fuction(x = ... , y = ...)
 		- image on move (the state)
-	this is harder than i thought, will use primetween instead.
+	- this is harder than i thought, will use primetween instead.
 4. events:
 	- Show dialogue
 	- Choose dialogue
